@@ -35,20 +35,9 @@
       font-size: 1.1em;
     }
   </style>
-  <header>
-    AI 랭킹 대시보드
-  </header>
-  <body>
+</head>
+<body>
   <h1>AIrank</h1>
-  <main>
-    <div class="card">
-      <div class="rank">1위: GPT-4o</div>
-      <p>OpenAI의 최신 멀티모달 모델. 실시간 사용량 최상위권.</p>
-    </div>
-    <div class="card">
-      <div class="rank">2위: Claude 3 Opus</div>
-      <p>Anthropic의 대규모 언어 모델. 맥락 유지력 우수.</p>
-    </div>
 
   <div class="dashboard-title">AI 랭킹 대시보드</div>
 
@@ -61,3 +50,36 @@
   </script>
 </body>
 </html>
+<script>
+  const aiModels = [
+    {
+      rank: 1,
+      name: "GPT-4o",
+      description: "OpenAI의 최신 멀티모달 모델. 실시간 사용량 최상위권."
+    },
+    {
+      rank: 2,
+      name: "Claude 3 Opus",
+      description: "Anthropic의 대규모 언어 모델. 맥락 유지력 우수."
+    },
+    {
+      rank: 3,
+      name: "Gemini 1.5 Pro",
+      description: "Google DeepMind의 강력한 생성 AI 모델."
+    },
+    {
+      rank: 4,
+      name: "Mistral Large",
+      description: "유럽계 오픈소스 기반 고성능 언어 모델."
+    }
+  ];
+
+  const aiListDiv = document.getElementById("ai-list");
+
+  aiModels.forEach(model => {
+    const div = document.createElement("div");
+    div.className = "rank-item";
+    div.innerHTML = `<strong>${model.rank}위: ${model.name}</strong><br>${model.description}`;
+    aiListDiv.appendChild(div);
+  });
+</script>
