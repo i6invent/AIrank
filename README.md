@@ -2,62 +2,44 @@
 <html lang="ko">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>AI 랭크 사이트</title>
+  <title>AI 랭킹 대시보드</title>
   <style>
     body {
-      margin: 0;
-      padding: 0;
-      background-color: #0D1117;
-      color: #E0E0E0;
-      font-family: 'Noto Sans KR', 'Inter', sans-serif;
-      line-height: 1.6;
-    }
-
-    header {
-      background-color: #1A1F2C;
+      background-color: #111827;
+      color: #d1d5db;
+      font-family: 'Segoe UI', sans-serif;
       padding: 20px;
+    }
+    h1 {
+      font-size: 2em;
+      border-bottom: 1px solid #ccc;
+      color: #93c5fd;
+    }
+    .dashboard-title {
+      background-color: #1f2937;
+      padding: 20px;
+      font-weight: bold;
+      font-size: 1.5em;
+      margin: 20px 0;
       text-align: center;
-      font-size: 24px;
-      font-weight: bold;
-      color: #FFFFFF;
-      border-bottom: 1px solid #2A2F3C;
+      color: white;
     }
-
-    main {
-      padding: 30px;
-      max-width: 1000px;
-      margin: auto;
-    }
-
-    .card {
-      background-color: #1A1F2C;
+    .rank-item {
+      background-color: #1f2937;
       padding: 20px;
-      margin-bottom: 20px;
       border-radius: 12px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.3);
+      margin-bottom: 15px;
     }
-
-    .rank {
-      font-size: 18px;
-      font-weight: bold;
-      color: #60A5FA;
-    }
-
-    a {
-      color: #93C5FD;
-      text-decoration: none;
-    }
-
-    a:hover {
-      text-decoration: underline;
+    .rank-item strong {
+      color: #60a5fa;
+      font-size: 1.1em;
     }
   </style>
-</head>
-<body>
   <header>
     AI 랭킹 대시보드
   </header>
+  <body>
+  <h1>AIrank</h1>
   <main>
     <div class="card">
       <div class="rank">1위: GPT-4o</div>
@@ -67,7 +49,15 @@
       <div class="rank">2위: Claude 3 Opus</div>
       <p>Anthropic의 대규모 언어 모델. 맥락 유지력 우수.</p>
     </div>
-    <!-- 더 많은 모델 추가 예정 -->
-  </main>
+
+  <div class="dashboard-title">AI 랭킹 대시보드</div>
+
+  <div id="ai-list">
+    <!-- AI 랭킹 항목들이 여기에 들어갈 예정 -->
+  </div>
+
+  <script>
+    // 2단계에서 설명
+  </script>
 </body>
 </html>
